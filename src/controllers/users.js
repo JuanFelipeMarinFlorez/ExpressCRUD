@@ -47,7 +47,7 @@ function getUsers(req,res){
 
 }
 
-function getUser(req,res){
+function getUserByEmail(req,res){
 
     try {     
         User.find({email: req.params.email}).exec( (err, users) => {
@@ -149,4 +149,4 @@ function deleteUserById(req,res){
 }
 
 
-module.exports = { helloWorld,getUsers,getUser,saveUser,updateUserById,deleteUserById }
+module.exports = { helloWorld,getUsers,getUserByEmail,saveUser,updateUserById,deleteUserById }
